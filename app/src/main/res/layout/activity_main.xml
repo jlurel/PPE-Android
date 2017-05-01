@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/editGlycemie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_toRightOf="@+id/txtGlycemie"
+        android:layout_alignBaseline="@+id/txtGlycemie"
+        android:layout_margin="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/txtProtocole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="19dp"
+        android:text="Choisir le protocole"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtGlycemie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saisir la glycemie"
+        android:layout_below="@+id/rg_protocole"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@+id/txtProtocole" />
+
+    <Button
+        android:id="@+id/btnAfficherInsuline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="Afficher l'insuline"
+        android:layout_below="@+id/txtGlycemie"
+        android:layout_alignStart="@+id/txtGlycemie" />
+
+    <TextView
+        android:id="@+id/txtInsuline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insuline : "
+        android:layout_alignBaseline="@+id/btnAfficherInsuline"
+        android:layout_alignBottom="@+id/btnAfficherInsuline"
+        android:layout_toEndOf="@+id/btnAfficherInsuline"
+        android:layout_marginStart="28dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/txtNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPrenom"
+        android:layout_below="@id/btnAfficherInsuline"
+        android:layout_marginTop="10dp"
+        android:text="Saisir le nom"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txtPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btnAfficherInsuline"
+        android:layout_below="@id/txtNom"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+        android:text="Saisir le prenom"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        android:layout_alignBaseline="@+id/txtNom"
+        android:layout_alignBottom="@+id/txtNom"
+        android:layout_alignStart="@+id/editGlycemie" />
+
+    <EditText
+        android:id="@+id/editPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPrenom"
+        android:layout_alignStart="@+id/editNom"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnAjouterMalade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPrenom"
+        android:layout_below="@+id/editPrenom"
+        android:layout_marginTop="17dp"
+        android:text="Ajouter"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnAfficherMalades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editPrenom"
+        android:layout_below="@+id/editPrenom"
+        android:layout_alignBaseline="@+id/btnAjouterMalade"
+        android:text="Afficher les malades"
+        android:layout_alignStart="@+id/editPrenom" />
+
+    <ListView
+        android:id="@+id/listMalades"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/btnAfficherMalades"
+        android:layout_alignStart="@+id/btnAjouterMalade"
+        android:layout_below="@+id/btnAjouterMalade"
+        android:layout_marginTop="27dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_protocole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/txtProtocole"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radio_protocole1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Protocole 1" />
+
+        <RadioButton
+                android:id="@+id/radio_protocole2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/radio_protocole1"
+                android:layout_toEndOf="@+id/radio_protocole1"
+                android:layout_weight="1"
+            android:text="Protocole 2" />
+
+    </RadioGroup>
+
+</RelativeLayout>
